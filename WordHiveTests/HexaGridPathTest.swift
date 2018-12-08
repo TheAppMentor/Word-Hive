@@ -10,17 +10,20 @@ import XCTest
 
 class HexaGridPathTest: XCTestCase {
 
+    var hexGrid : HexCellGrid!
+    
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
+        hexGrid = HexCellGrid(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
     }
 
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testPathsFrom00() {
+        hexGrid.getAllPaths(paths: [hexGrid.cellAtPosition(position: GridPosition(row:0,col:0))!])
+        print("🍏 Paths found : \(hexGrid.allPaths.count)")
     }
 
     func testPerformanceExample() {

@@ -11,18 +11,34 @@ import UIKit
 
 @IBDesignable
 
-class HexCell : UIView{
 
+
+class GridCell : UIView{
+    var position : GridPosition?
+}
+
+class HexCell : GridCell{
+
+    static func ==(lhs : HexCell, rhs : HexCell) -> Bool{
+        return lhs.textValue == rhs.textValue
+    }
+    
     var touchEventDelegate : CellHilightDelegate? = nil
     
     var textValue : String!
+    var isSelected : Bool = false
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setupHexagon()
     }
-    
-    
+   
+    /*
+    override var debugDescription: String{
+        let desc = self.debugDescription + "; Position : " + self.position.debugDescription
+        return desc
+    }
+    */
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupHexagon()

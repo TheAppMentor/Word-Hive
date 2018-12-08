@@ -27,7 +27,7 @@ class ViewController: UIViewController {
         createWordArray()
         print("Time to make word array = \(-startTime.timeIntervalSinceNow)")
         let startTime1 = NSDate()
-        //insertWordsIntoTrie()
+        insertWordsIntoTrie()
         print("Time to Build Tree = \(-startTime1.timeIntervalSinceNow)")
         
         let startTime2 = NSDate()
@@ -38,7 +38,7 @@ class ViewController: UIViewController {
 
     
     func buildGrid() {
-        let hexGrid = HexGrid(frame: CGRect(x: 0, y: 0, width: gridContainer.frame.width, height: gridContainer.frame.height))
+        let hexGrid = HexCellGrid(frame: CGRect(x: 0, y: 0, width: gridContainer.frame.width, height: gridContainer.frame.height))
         gridContainer.addSubview(hexGrid)
     }
     

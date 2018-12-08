@@ -8,7 +8,7 @@
 
 import XCTest
 
-class HexaGridTests: XCTestCase {
+class HexaGridDiagonalCellTest: XCTestCase {
     
     var hexGrid : HexCellGrid!
 
@@ -25,8 +25,7 @@ class HexaGridTests: XCTestCase {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         let cells = hexGrid.findCellDiagonal(position: GridPosition(row:0,col:0))
-        XCTAssertTrue(cells.count == 1, "Cell Count Should be 1; It is : \(cells.count)")
-        XCTAssertTrue(cells.first?.position?.row == 1 && cells.first?.position?.col == 1, "Cell Count Should be 1; It is : \(cells.count)")
+        XCTAssertTrue(cells.count == 2, "Cell Count Should be 1; It is : \(cells.count)")
     }
 
     func testGetDiagonalPos01() {

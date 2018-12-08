@@ -7,3 +7,18 @@
 //
 
 import Foundation
+
+struct GridPosition : Equatable {
+    var row : UInt
+    var col : UInt
+    
+    static func ==(lhs : GridPosition, rhs : GridPosition) -> Bool{
+        return (lhs.row == rhs.row && lhs.col == rhs.col)
+    }
+
+    subscript(_ row: UInt, _ col: UInt) -> GridPosition {
+        get {
+            return GridPosition(row: row, col: col)
+        }
+    }
+}
