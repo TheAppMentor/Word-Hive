@@ -9,9 +9,16 @@
 import Foundation
 import UIKit
 
-class HexGrid : UIView, CellHilightDelegate {
+class CellGrid : UIView{
     
-    var selectedCells : [HexCell] = []
+}
+
+class HexCellGrid : UIView, CellHilightDelegate {
+    
+    let maxRows = 5 // cant change this..cellCountForRow is hard coded !
+    
+    var cells : [HexCellGrid] = []
+    var selectedCells : [HexCellGrid] = []
     
     var selectedWord : String {
         var tempStr = ""
@@ -34,7 +41,7 @@ class HexGrid : UIView, CellHilightDelegate {
         
 //        let cellsPerRow : Int = Int(frame.width.truncatingRemainder(dividingBy: cellWidth))
         
-        for theRow in 0..<5{
+        for theRow in 0..<maxRows {
             for col in 0..<cellCountForRow(row: theRow){
                 let  theCell = HexCell(frame: CGRect(x: (cellWidth * CGFloat(col)) + gridSpacingFor(row: theRow, cellWidth: cellWidth), y: cellWidth * CGFloat(theRow) , width: cellWidth, height: cellWidth))
                 theCell.touchEventDelegate = self
@@ -80,11 +87,12 @@ class HexGrid : UIView, CellHilightDelegate {
     func touchesMovedToLocation(touch : UITouch){
         let currentPostion = touch.location(in: self)
         for eachSubView in subviews{
-            if eachSubView is HexCell{
-                if eachSubView.frame.contains(currentPostion){
-                    eachSubView.layer.backgroundColor = UIColor.purple.cgColor
-                    if selectedCells.contains(eachSubView as! HexCell) == false{  // Each Cell can be selected only once.
-                        selectedCells.append(eachSubView as! HexCell)
+            if let hexCell = eachSubView as? HexCell{
+                if hexCell.frame.contains(currentPostion){
+                    hexCell.layer.backgroundColor = UIColor.purple.cgColor
+                    if selectedCells.contains(hexCell) == false{  // Each Cell can be selected only once.
+                        hexCell.isSelected = true
+                        selectedCells.append(hexCell)
                     }
 //                    print("Value is \((eachSubView as! HexCell).textValue)")
                 }
@@ -102,6 +110,19 @@ class HexGrid : UIView, CellHilightDelegate {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         print("Grid : Touches began....")
+    }
+    
+    func isCellSelected(cell : HexCell){
+       
+    }
+    
+    func getPositionForCell(cell : HexCell){
+        
+    }
+    
+    func findAdjacentCells(cell : HexCell) -> [HexCell]{
+        
+        return []
     }
 
 }
