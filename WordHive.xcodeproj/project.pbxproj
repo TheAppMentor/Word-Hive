@@ -54,7 +54,14 @@
 		2F54FF0C21BBB48A00231AE9 /* HexaGridAdjacentCellTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F54FF0B21BBB48A00231AE9 /* HexaGridAdjacentCellTest.swift */; };
 		2F54FF0E21BBBCDF00231AE9 /* HexaGridLeftCellTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F54FF0D21BBBCDF00231AE9 /* HexaGridLeftCellTest.swift */; };
 		2F54FF1021BBC49300231AE9 /* HexaGridRightCellTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F54FF0F21BBC49300231AE9 /* HexaGridRightCellTest.swift */; };
+		2F645E4421BEB2F60097DD46 /* WordScorer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F645E4321BEB2F60097DD46 /* WordScorer.swift */; };
+		2F645E4621BEB6090097DD46 /* WordScorerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F645E4521BEB6090097DD46 /* WordScorerTests.swift */; };
+		2F645E4721BEB66F0097DD46 /* WordScorer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F645E4321BEB2F60097DD46 /* WordScorer.swift */; };
+		2F645E4921BEC1B50097DD46 /* HexCellGrid_Codeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F645E4821BEC1B50097DD46 /* HexCellGrid_Codeable.swift */; };
 		2F7E9C2A21BC223400AC9A8C /* HexaGridPathTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7E9C2921BC223400AC9A8C /* HexaGridPathTest.swift */; };
+		2F7E9C2C21BD79E000AC9A8C /* DictionaryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7E9C2B21BD79E000AC9A8C /* DictionaryManager.swift */; };
+		2F7E9C2D21BD79E100AC9A8C /* DictionaryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7E9C2B21BD79E000AC9A8C /* DictionaryManager.swift */; };
+		2F7E9C2E21BD8A4A00AC9A8C /* Trie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1B97041EB77E0700FF91D6 /* Trie.swift */; };
 		2F80ACFC1EB884F50062F324 /* RandomAlphabetProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F80ACFB1EB884F50062F324 /* RandomAlphabetProvider.swift */; };
 /* End PBXBuildFile section */
 
@@ -115,7 +122,11 @@
 		2F54FF0B21BBB48A00231AE9 /* HexaGridAdjacentCellTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexaGridAdjacentCellTest.swift; sourceTree = "<group>"; };
 		2F54FF0D21BBBCDF00231AE9 /* HexaGridLeftCellTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexaGridLeftCellTest.swift; sourceTree = "<group>"; };
 		2F54FF0F21BBC49300231AE9 /* HexaGridRightCellTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexaGridRightCellTest.swift; sourceTree = "<group>"; };
+		2F645E4321BEB2F60097DD46 /* WordScorer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordScorer.swift; sourceTree = "<group>"; };
+		2F645E4521BEB6090097DD46 /* WordScorerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordScorerTests.swift; sourceTree = "<group>"; };
+		2F645E4821BEC1B50097DD46 /* HexCellGrid_Codeable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexCellGrid_Codeable.swift; sourceTree = "<group>"; };
 		2F7E9C2921BC223400AC9A8C /* HexaGridPathTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexaGridPathTest.swift; sourceTree = "<group>"; };
+		2F7E9C2B21BD79E000AC9A8C /* DictionaryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryManager.swift; sourceTree = "<group>"; };
 		2F80ACFB1EB884F50062F324 /* RandomAlphabetProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomAlphabetProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -160,10 +171,12 @@
 			children = (
 				2F1B96E81EB6FF2600FF91D6 /* AppDelegate.swift */,
 				2F1B96EA1EB6FF2600FF91D6 /* ViewController.swift */,
+				2F7E9C2B21BD79E000AC9A8C /* DictionaryManager.swift */,
 				2F1B97281EB7AA3E00FF91D6 /* WordList */,
 				2F1B97021EB74E7A00FF91D6 /* HexCell.swift */,
 				2F54FEE321B9658F00231AE9 /* GridPosition.swift */,
-				2F1B96FE1EB714F900FF91D6 /* HexCellGrid.swift */,
+				2F645E4A21BEC1E80097DD46 /* HexGrid */,
+				2F645E4321BEB2F60097DD46 /* WordScorer.swift */,
 				2F1B97041EB77E0700FF91D6 /* Trie.swift */,
 				2F1B97001EB73C5D00FF91D6 /* CellHilightDelegate.swift */,
 				2F80ACFB1EB884F50062F324 /* RandomAlphabetProvider.swift */,
@@ -218,9 +231,19 @@
 				2F54FF0D21BBBCDF00231AE9 /* HexaGridLeftCellTest.swift */,
 				2F54FF0F21BBC49300231AE9 /* HexaGridRightCellTest.swift */,
 				2F7E9C2921BC223400AC9A8C /* HexaGridPathTest.swift */,
+				2F645E4521BEB6090097DD46 /* WordScorerTests.swift */,
 				2F54FEDD21B95B1E00231AE9 /* Info.plist */,
 			);
 			path = WordHiveTests;
+			sourceTree = "<group>";
+		};
+		2F645E4A21BEC1E80097DD46 /* HexGrid */ = {
+			isa = PBXGroup;
+			children = (
+				2F1B96FE1EB714F900FF91D6 /* HexCellGrid.swift */,
+				2F645E4821BEC1B50097DD46 /* HexCellGrid_Codeable.swift */,
+			);
+			name = HexGrid;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -355,13 +378,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F645E4421BEB2F60097DD46 /* WordScorer.swift in Sources */,
 				2F54FEE421B9658F00231AE9 /* GridPosition.swift in Sources */,
 				2F1B97031EB74E7A00FF91D6 /* HexCell.swift in Sources */,
 				2F1B96EB1EB6FF2600FF91D6 /* ViewController.swift in Sources */,
 				2F1B96E91EB6FF2600FF91D6 /* AppDelegate.swift in Sources */,
 				2F1B97051EB77E0700FF91D6 /* Trie.swift in Sources */,
+				2F7E9C2C21BD79E000AC9A8C /* DictionaryManager.swift in Sources */,
 				2F80ACFC1EB884F50062F324 /* RandomAlphabetProvider.swift in Sources */,
 				2F1B97011EB73C5D00FF91D6 /* CellHilightDelegate.swift in Sources */,
+				2F645E4921BEC1B50097DD46 /* HexCellGrid_Codeable.swift in Sources */,
 				2F1B96FF1EB714F900FF91D6 /* HexCellGrid.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -372,6 +398,7 @@
 			files = (
 				2F54FEEA21B9ADAA00231AE9 /* CellHilightDelegate.swift in Sources */,
 				2F54FEDC21B95B1E00231AE9 /* WordHiveTests.swift in Sources */,
+				2F7E9C2E21BD8A4A00AC9A8C /* Trie.swift in Sources */,
 				2F54FEE821B9ADAA00231AE9 /* HexCell.swift in Sources */,
 				2F54FF0C21BBB48A00231AE9 /* HexaGridAdjacentCellTest.swift in Sources */,
 				2F54FEE921B9ADAA00231AE9 /* GridPosition.swift in Sources */,
@@ -381,6 +408,9 @@
 				2F54FF0E21BBBCDF00231AE9 /* HexaGridLeftCellTest.swift in Sources */,
 				2F54FEE721B9AD0D00231AE9 /* HexCellGrid.swift in Sources */,
 				2F54FEE621B9ABE200231AE9 /* HexaGridDiagonalCellTest.swift in Sources */,
+				2F7E9C2D21BD79E100AC9A8C /* DictionaryManager.swift in Sources */,
+				2F645E4621BEB6090097DD46 /* WordScorerTests.swift in Sources */,
+				2F645E4721BEB66F0097DD46 /* WordScorer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

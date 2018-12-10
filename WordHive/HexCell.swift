@@ -9,9 +9,9 @@
 import Foundation
 import UIKit
 
-@IBDesignable
+//@IBDesignable
 
-
+var tempArr : [String] =         ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"].reversed()
 
 class GridCell : UIView{
     var position : GridPosition?
@@ -19,6 +19,7 @@ class GridCell : UIView{
 
 class HexCell : GridCell{
 
+    //ONLY FOR TESTING
     static func ==(lhs : HexCell, rhs : HexCell) -> Bool{
         return lhs.textValue == rhs.textValue
     }
@@ -33,13 +34,18 @@ class HexCell : GridCell{
         setupHexagon()
     }
    
-    /*
     override var debugDescription: String{
-        let desc = self.debugDescription + "; Position : " + self.position.debugDescription
+        //let desc = self.debugDescription + "; Position : " + self.position.debugDescription
+        let desc = "HexCell => Text : \(textValue!) => Postion : (\(position!.row),\(position!.col))"
         return desc
     }
-    */
-    override init(frame: CGRect) {
+    
+    convenience init(frame: CGRect, position : GridPosition) {
+        self.init(frame: frame)
+        self.position = position
+    }
+    
+    private override init(frame: CGRect) {
         super.init(frame: frame)
         setupHexagon()
         clipsToBounds = true
@@ -48,7 +54,11 @@ class HexCell : GridCell{
         
         // Add Label
         let textLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
+
+        // Prashanth : The next tow lines.. toggle from random .. grid to an ordered grid (for testing)
         textValue = RandomAlphabetProvider.shared.randomAlphabet
+        //textValue = tempArr.popLast()
+        
         textLabel.text = textValue
         textLabel.textAlignment = .center
         

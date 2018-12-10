@@ -12,13 +12,15 @@ struct RandomAlphabetProvider {
     
     static let shared = RandomAlphabetProvider()
     
-    private let array = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
+    private let allCharacters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
     
+    private let vowels = ["A","E","I","O","U"]
+    private let consonants = ["B","C","D","F","G","H","J","K","L","M","N","P","Q","R","S","T","V","W","X","Y","Z"]
+
     var randomAlphabet : String{
         let randomInt = randomNumber(inRange: 0...25)
-        return array[randomInt]
-    }
-    
+        return allCharacters[randomInt]
+    }    
     
     private func randomNumber<T : SignedInteger>(inRange range: ClosedRange<T> = 1...6) -> T {
         let length = (range.upperBound - range.lowerBound + 1).toIntMax()

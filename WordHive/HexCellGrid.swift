@@ -13,8 +13,8 @@ class CellGrid : UIView{
     
 }
 
-class HexCellGrid : CellGrid, CellHilightDelegate {
-    
+class HexCellGrid : CellGrid, CellHilightDelegate{
+
     let maxRows : UInt = 5 // cant change this..cellCountForRow is hard coded !
     
     var cells : [HexCell] = []
@@ -40,15 +40,30 @@ class HexCellGrid : CellGrid, CellHilightDelegate {
         
 //        let cellsPerRow : Int = Int(frame.width.truncatingRemainder(dividingBy: cellWidth))
         
+        allGridPositions().forEach { (gridPos) in
+            let  theCell = HexCell(frame: CGRect(x: (cellWidth * CGFloat(gridPos.col)) + gridSpacingFor(row: Int(gridPos.row), cellWidth: cellWidth), y: cellWidth * CGFloat(gridPos.row) , width: cellWidth, height: cellWidth), position : gridPos)
+            //theCell.position = gridPos
+            theCell.touchEventDelegate = self
+            cells.append(theCell)
+            addSubview(theCell)
+        }
+        
+//        for theRow in 0..<maxRows {
+//            for theCol in 0..<cellCountForRow(row: theRow){
+//            }
+//        }
+    }
+    
+    func allGridPositions() -> [GridPosition]{
+        
+        var allGridPos : [GridPosition] = []
+        
         for theRow in 0..<maxRows {
             for theCol in 0..<cellCountForRow(row: theRow){
-                let  theCell = HexCell(frame: CGRect(x: (cellWidth * CGFloat(theCol)) + gridSpacingFor(row: Int(theRow), cellWidth: cellWidth), y: cellWidth * CGFloat(theRow) , width: cellWidth, height: cellWidth))
-                theCell.position = GridPosition(row : theRow,col: theCol)
-                theCell.touchEventDelegate = self
-                cells.append(theCell)
-                addSubview(theCell)
+               allGridPos.append(GridPosition(row : theRow,col: theCol))
             }
         }
+        return allGridPos
     }
     
     func cellCountForRow(row : UInt) -> UInt {
@@ -269,36 +284,109 @@ class HexCellGrid : CellGrid, CellHilightDelegate {
         
     }
 
-    var allPaths : [[HexCell]] = []
+    var allWords : Set<String> = []
     
-    func getAllPaths(paths : [HexCell]){
+    func getAllWordsInGrid(){
+        allGridPositions().forEach {
+            if let validCell = cellAtPosition(position: $0){
+                getAllWordsStartingWithCell(paths: [validCell])
+            }
+        }
+
+        print("\n\n>>>>>>>> Found \(allWords.count) Words <<<<<<<<<")
+        allWords.forEach { print("\($0) -> \(WordScorer().scoreForString(inputString: $0))") }
+    }
+    
+    
+    func getAllWordsStartingWithCell(paths : [HexCell]){
+        let pathLetters = paths.map({return $0.textValue!})
+
+        let pathString = pathLetters.reduce("",+)
+        let dict = DictionaryManager.shared.findWordsWithPrefix(prefix: pathString)
+        
+        guard !dict.isEmpty else {
+            return
+        }
+        
+        //print("\n\n ============================================")
+        //print("Paths Are : \(paths)")
+        
+        //let pathText = paths.map({$0.textValue!})
+        //print(pathText)
         
         // Set all paths are selected.
-        paths.forEach { $0.isSelected = true }
+        //paths.forEach { $0.isSelected = true }
         
         let adjCells = findAdjacentCells(position: paths.last!.position!)
         
-        print("\n\n\nAdjacent Cells are : \(adjCells)")
+        //print("\n\n\nAdjacent Cells are : \(adjCells)")
         
         var newPaths : [[HexCell]] = []
         
         adjCells.forEach {
-            
-            if $0.isSelected{
-                return
+            if  paths.contains($0) == false {
+                // Why simply fin
+                var tempPath = paths
+                tempPath.append($0)
+                //print("New Paths are : \(tempPath)")
+                newPaths.append(tempPath)
             }
-            
-            var tempPath = paths
-            tempPath.append($0)
-            $0.isSelected = true
-            print("New Paths are : \(tempPath)")
-            newPaths.append(tempPath)
         }
-       allPaths.append(contentsOf: newPaths)
+       
+        let letterArr = newPaths.map({
+            return $0.map({
+                $0.textValue!
+            })
+        })
+        
+        letterArr.forEach {
+            let word = $0.reduce("", +)
+            if DictionaryManager.shared.contains(word: word){
+                //print("Adding Word : \(word)")
+                allWords.insert(word)
+            }
+        }
         
         newPaths.forEach {
-            print("Recursing => \(newPaths)")
-            getAllPaths(paths: $0)
+//            print("Recursing => \(newPaths)")
+            getAllWordsStartingWithCell(paths: $0)
         }
     }
 }
+
+
+/*
+func getAllWords(paths : [HexCell]){
+    
+    //print("\n\n ============================================")
+    //print("Paths Are : \(paths)")
+    
+    let pathText = paths.map({$0.textValue!})
+    print(pathText)
+    
+    // Set all paths are selected.
+    //paths.forEach { $0.isSelected = true }
+    
+    let adjCells = findAdjacentCells(position: paths.last!.position!)
+    
+    //print("\n\n\nAdjacent Cells are : \(adjCells)")
+    
+    var newPaths : [[HexCell]] = []
+    
+    adjCells.forEach {
+        if  paths.contains($0) == false {
+            // Why simply fin
+            var tempPath = paths
+            tempPath.append($0)
+            //print("New Paths are : \(tempPath)")
+            newPaths.append(tempPath)
+        }
+    }
+    allPaths.append(contentsOf: newPaths)
+    
+    newPaths.forEach {
+        //            print("Recursing => \(newPaths)")
+        getAllPaths(paths: $0)
+    }
+}
+ */
