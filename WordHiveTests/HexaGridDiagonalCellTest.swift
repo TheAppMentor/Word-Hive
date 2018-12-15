@@ -33,7 +33,7 @@ class HexaGridDiagonalCellTest: XCTestCase {
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         let cells = hexGrid.findCellDiagonal(position: GridPosition(row:0,col:1))
         XCTAssertTrue(cells.count == 2, "Cell Count Should be 1; It is : \(cells.count)")
-        //XCTAssertTrue(cells.first?.position?.row == 1 && cells.first?.position?.col == 1, "Cell Count Should be 1; It is : \(cells.count)")
+        //XCTAssertTrue(cells.first?.gridPosition.row == 1 && cells.first?.position?.col == 1, "Cell Count Should be 1; It is : \(cells.count)")
     }
 
     func testGetDiagonalPos02() {
@@ -41,8 +41,8 @@ class HexaGridDiagonalCellTest: XCTestCase {
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         let cells = hexGrid.findCellDiagonal(position: GridPosition(row:0,col:2))
         XCTAssertTrue(cells.count == 2, "Cell Count Should be 2; It is : \(cells.count)")
-        XCTAssertTrue(cells.first?.position?.row == 1 && cells.first?.position?.col == 2, "Position is wrong")
-        XCTAssertTrue(cells.last?.position?.row == 1 && cells.last?.position?.col == 3, "Position is wrong")
+        XCTAssertTrue(cells.first?.gridPosition.row == 1 && cells.first?.gridPosition.col == 2, "Position is wrong")
+        XCTAssertTrue(cells.last?.gridPosition.row == 1 && cells.last?.gridPosition.col == 3, "Position is wrong")
     }
 
 
@@ -51,7 +51,7 @@ class HexaGridDiagonalCellTest: XCTestCase {
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         let cells = hexGrid.findCellDiagonal(position: GridPosition(row:2,col:2))
         XCTAssertTrue(cells.count == 4, "Cell Count Should be 1; It is : \(cells.count)")
-        //XCTAssertTrue(cells.first?.position?.row == 3 && cells.first?.position?.col == 2, "Cell Count Should be 1; It is : \(cells.count)")
+        //XCTAssertTrue(cells.first?.gridPosition.row == 3 && cells.first?.position?.col == 2, "Cell Count Should be 1; It is : \(cells.count)")
     }
 
     

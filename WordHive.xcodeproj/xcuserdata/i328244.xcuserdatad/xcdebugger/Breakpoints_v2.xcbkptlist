@@ -6,84 +6,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WordHive/HexCellGrid.swift"
-            timestampString = "566150981.681752"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "168"
-            endingLineNumber = "168"
-            landmarkName = "cellAtPosition(position:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "WordHive.HexCellGrid.cellAtPosition(position: WordHive.GridPosition) -&gt; Swift.Optional&lt;WordHive.HexCell&gt;"
-                  moduleName = "WordHive"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/i328244/Desktop/XCode%20Projects/WordHive/WordHive/HexCellGrid.swift"
-                  timestampString = "565949022.35981"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "153"
-                  endingLineNumber = "153"
-                  offsetFromSymbolStart = "47">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (WordHive.HexCell) -&gt; Swift.Bool in WordHive.HexCellGrid.cellAtPosition(position: WordHive.GridPosition) -&gt; Swift.Optional&lt;WordHive.HexCell&gt;"
-                  moduleName = "WordHive"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/i328244/Desktop/XCode%20Projects/WordHive/WordHive/HexCellGrid.swift"
-                  timestampString = "565949022.361411"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "153"
-                  endingLineNumber = "153"
-                  offsetFromSymbolStart = "33">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "WordHiveTests.HexCellGrid.cellAtPosition(position: WordHiveTests.GridPosition) -&gt; Swift.Optional&lt;WordHiveTests.HexCell&gt;"
-                  moduleName = "WordHiveTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/i328244/Desktop/XCode%20Projects/WordHive/WordHive/HexCellGrid.swift"
-                  timestampString = "565949023.1533"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "153"
-                  endingLineNumber = "153"
-                  offsetFromSymbolStart = "47">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (WordHiveTests.HexCell) -&gt; Swift.Bool in WordHiveTests.HexCellGrid.cellAtPosition(position: WordHiveTests.GridPosition) -&gt; Swift.Optional&lt;WordHiveTests.HexCell&gt;"
-                  moduleName = "WordHiveTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/i328244/Desktop/XCode%20Projects/WordHive/WordHive/HexCellGrid.swift"
-                  timestampString = "565949023.155661"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "153"
-                  endingLineNumber = "153"
-                  offsetFromSymbolStart = "33">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -100,143 +22,63 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "WordHive/HexCellGrid.swift"
-            timestampString = "566150981.682302"
+            filePath = "WordHiveTests/HexaGridLeftCellTest.swift"
+            timestampString = "566315997.908785"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "271"
-            endingLineNumber = "271"
-            landmarkName = "findAdjacentCells(position:)"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "testLeftCell01()"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "WordHive.HexCellGrid.findAdjacentCells(position: WordHive.GridPosition) -&gt; Swift.Array&lt;WordHive.HexCell&gt;"
-                  moduleName = "WordHive"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/i328244/Desktop/XCode%20Projects/WordHive/WordHive/HexCellGrid.swift"
-                  timestampString = "565963556.267766"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "247"
-                  endingLineNumber = "247"
-                  offsetFromSymbolStart = "138">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "WordHiveTests.HexCellGrid.findAdjacentCells(position: WordHiveTests.GridPosition) -&gt; Swift.Array&lt;WordHiveTests.HexCell&gt;"
-                  moduleName = "WordHiveTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/i328244/Desktop/XCode%20Projects/WordHive/WordHive/HexCellGrid.swift"
-                  timestampString = "565963556.957613"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "247"
-                  endingLineNumber = "247"
-                  offsetFromSymbolStart = "138">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WordHive/HexCellGrid.swift"
-            timestampString = "566150981.6826349"
+            timestampString = "566315997.90883"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "195"
-            endingLineNumber = "195"
-            landmarkName = "findCellDiagonal(position:)"
+            startingLineNumber = "263"
+            endingLineNumber = "263"
+            landmarkName = "findLeftCell(position:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  shouldBeEnabled = "No"
+                  shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "WordHive.HexCellGrid.findCellDiagonal(position: WordHive.GridPosition) -&gt; Swift.Array&lt;WordHive.HexCell&gt;"
+                  symbolName = "WordHive.HexCellGrid.findLeftCell(position: WordHive.GridPosition) -&gt; Swift.Optional&lt;WordHive.HexCell&gt;"
                   moduleName = "WordHive"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/i328244/Desktop/XCode%20Projects/WordHive/WordHive/HexCellGrid.swift"
-                  timestampString = "565982239.736037"
+                  timestampString = "566315956.817227"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "180"
-                  endingLineNumber = "180"
-                  offsetFromSymbolStart = "229">
+                  startingLineNumber = "263"
+                  endingLineNumber = "263"
+                  offsetFromSymbolStart = "30">
                </Location>
                <Location
-                  shouldBeEnabled = "No"
+                  shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "WordHiveTests.HexCellGrid.findCellDiagonal(position: WordHiveTests.GridPosition) -&gt; Swift.Array&lt;WordHiveTests.HexCell&gt;"
+                  symbolName = "WordHiveTests.HexCellGrid.findLeftCell(position: WordHiveTests.GridPosition) -&gt; Swift.Optional&lt;WordHiveTests.HexCell&gt;"
                   moduleName = "WordHiveTests"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/i328244/Desktop/XCode%20Projects/WordHive/WordHive/HexCellGrid.swift"
-                  timestampString = "565982240.864428"
+                  timestampString = "566315957.609333"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "180"
-                  endingLineNumber = "180"
-                  offsetFromSymbolStart = "229">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WordHive/HexCellGrid.swift"
-            timestampString = "566150981.68295"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "199"
-            endingLineNumber = "199"
-            landmarkName = "findCellDiagonal(position:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "WordHive.HexCellGrid.findCellDiagonal(position: WordHive.GridPosition) -&gt; Swift.Array&lt;WordHive.HexCell&gt;"
-                  moduleName = "WordHive"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/i328244/Desktop/XCode%20Projects/WordHive/WordHive/HexCellGrid.swift"
-                  timestampString = "565982239.740762"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "184"
-                  endingLineNumber = "184"
-                  offsetFromSymbolStart = "298">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "WordHiveTests.HexCellGrid.findCellDiagonal(position: WordHiveTests.GridPosition) -&gt; Swift.Array&lt;WordHiveTests.HexCell&gt;"
-                  moduleName = "WordHiveTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/i328244/Desktop/XCode%20Projects/WordHive/WordHive/HexCellGrid.swift"
-                  timestampString = "565982240.867535"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "184"
-                  endingLineNumber = "184"
-                  offsetFromSymbolStart = "298">
+                  startingLineNumber = "263"
+                  endingLineNumber = "263"
+                  offsetFromSymbolStart = "30">
                </Location>
             </Locations>
          </BreakpointContent>

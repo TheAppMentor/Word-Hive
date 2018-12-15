@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct GridPosition : Equatable {
+struct GridPosition : Equatable, Codable {
     var row : UInt
     var col : UInt
     

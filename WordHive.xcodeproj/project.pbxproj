@@ -63,6 +63,18 @@
 		2F7E9C2D21BD79E100AC9A8C /* DictionaryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7E9C2B21BD79E000AC9A8C /* DictionaryManager.swift */; };
 		2F7E9C2E21BD8A4A00AC9A8C /* Trie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1B97041EB77E0700FF91D6 /* Trie.swift */; };
 		2F80ACFC1EB884F50062F324 /* RandomAlphabetProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F80ACFB1EB884F50062F324 /* RandomAlphabetProvider.swift */; };
+		2FAD565621C128BE004AEB8B /* HexNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAD565521C128BE004AEB8B /* HexNode.swift */; };
+		2FAD565821C12955004AEB8B /* HexCellRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAD565721C12955004AEB8B /* HexCellRenderer.swift */; };
+		2FAD565921C14918004AEB8B /* HexNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAD565521C128BE004AEB8B /* HexNode.swift */; };
+		2FAD565A21C1491B004AEB8B /* HexCellRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAD565721C12955004AEB8B /* HexCellRenderer.swift */; };
+		2FAD565B21C14922004AEB8B /* HexCellGrid_Codeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F645E4821BEC1B50097DD46 /* HexCellGrid_Codeable.swift */; };
+		2FAD565D21C14CAE004AEB8B /* HexCellGridNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAD565C21C14CAE004AEB8B /* HexCellGridNode.swift */; };
+		2FAD565E21C14CAE004AEB8B /* HexCellGridNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAD565C21C14CAE004AEB8B /* HexCellGridNode.swift */; };
+		2FAD566921C14F7E004AEB8B /* WordHiveFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 2FAD566721C14F7E004AEB8B /* WordHiveFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2FAD566C21C14F7E004AEB8B /* WordHiveFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FAD566521C14F7E004AEB8B /* WordHiveFramework.framework */; };
+		2FAD566D21C14F7E004AEB8B /* WordHiveFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2FAD566521C14F7E004AEB8B /* WordHiveFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2FAD567221C1501D004AEB8B /* HexNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAD565521C128BE004AEB8B /* HexNode.swift */; };
+		2FAD567321C15059004AEB8B /* CellHilightDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1B97001EB73C5D00FF91D6 /* CellHilightDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,7 +85,28 @@
 			remoteGlobalIDString = 2F1B96E41EB6FF2600FF91D6;
 			remoteInfo = WordHive;
 		};
+		2FAD566A21C14F7E004AEB8B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2F1B96DD1EB6FF2600FF91D6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2FAD566421C14F7E004AEB8B;
+			remoteInfo = WordHiveFramework;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		2FAD567121C14F7E004AEB8B /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				2FAD566D21C14F7E004AEB8B /* WordHiveFramework.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		2F1B96E51EB6FF2600FF91D6 /* WordHive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WordHive.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -128,6 +161,13 @@
 		2F7E9C2921BC223400AC9A8C /* HexaGridPathTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexaGridPathTest.swift; sourceTree = "<group>"; };
 		2F7E9C2B21BD79E000AC9A8C /* DictionaryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryManager.swift; sourceTree = "<group>"; };
 		2F80ACFB1EB884F50062F324 /* RandomAlphabetProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomAlphabetProvider.swift; sourceTree = "<group>"; };
+		2FAD565521C128BE004AEB8B /* HexNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexNode.swift; sourceTree = "<group>"; };
+		2FAD565721C12955004AEB8B /* HexCellRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexCellRenderer.swift; sourceTree = "<group>"; };
+		2FAD565C21C14CAE004AEB8B /* HexCellGridNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexCellGridNode.swift; sourceTree = "<group>"; };
+		2FAD565F21C14D7D004AEB8B /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = MyPlayground.playground; path = WordHive/MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		2FAD566521C14F7E004AEB8B /* WordHiveFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WordHiveFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2FAD566721C14F7E004AEB8B /* WordHiveFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WordHiveFramework.h; sourceTree = "<group>"; };
+		2FAD566821C14F7E004AEB8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,10 +175,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2FAD566C21C14F7E004AEB8B /* WordHiveFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		2F54FED621B95B1E00231AE9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2FAD566221C14F7E004AEB8B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -151,8 +199,10 @@
 		2F1B96DC1EB6FF2600FF91D6 = {
 			isa = PBXGroup;
 			children = (
+				2FAD565F21C14D7D004AEB8B /* MyPlayground.playground */,
 				2F1B96E71EB6FF2600FF91D6 /* WordHive */,
 				2F54FEDA21B95B1E00231AE9 /* WordHiveTests */,
+				2FAD566621C14F7E004AEB8B /* WordHiveFramework */,
 				2F1B96E61EB6FF2600FF91D6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -162,6 +212,7 @@
 			children = (
 				2F1B96E51EB6FF2600FF91D6 /* WordHive.app */,
 				2F54FED921B95B1E00231AE9 /* WordHiveTests.xctest */,
+				2FAD566521C14F7E004AEB8B /* WordHiveFramework.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -174,6 +225,8 @@
 				2F7E9C2B21BD79E000AC9A8C /* DictionaryManager.swift */,
 				2F1B97281EB7AA3E00FF91D6 /* WordList */,
 				2F1B97021EB74E7A00FF91D6 /* HexCell.swift */,
+				2FAD565521C128BE004AEB8B /* HexNode.swift */,
+				2FAD565721C12955004AEB8B /* HexCellRenderer.swift */,
 				2F54FEE321B9658F00231AE9 /* GridPosition.swift */,
 				2F645E4A21BEC1E80097DD46 /* HexGrid */,
 				2F645E4321BEB2F60097DD46 /* WordScorer.swift */,
@@ -241,12 +294,33 @@
 			isa = PBXGroup;
 			children = (
 				2F1B96FE1EB714F900FF91D6 /* HexCellGrid.swift */,
+				2FAD565C21C14CAE004AEB8B /* HexCellGridNode.swift */,
 				2F645E4821BEC1B50097DD46 /* HexCellGrid_Codeable.swift */,
 			);
 			name = HexGrid;
 			sourceTree = "<group>";
 		};
+		2FAD566621C14F7E004AEB8B /* WordHiveFramework */ = {
+			isa = PBXGroup;
+			children = (
+				2FAD566721C14F7E004AEB8B /* WordHiveFramework.h */,
+				2FAD566821C14F7E004AEB8B /* Info.plist */,
+			);
+			path = WordHiveFramework;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		2FAD566021C14F7E004AEB8B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2FAD566921C14F7E004AEB8B /* WordHiveFramework.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		2F1B96E41EB6FF2600FF91D6 /* WordHive */ = {
@@ -256,10 +330,12 @@
 				2F1B96E11EB6FF2600FF91D6 /* Sources */,
 				2F1B96E21EB6FF2600FF91D6 /* Frameworks */,
 				2F1B96E31EB6FF2600FF91D6 /* Resources */,
+				2FAD567121C14F7E004AEB8B /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				2FAD566B21C14F7E004AEB8B /* PBXTargetDependency */,
 			);
 			name = WordHive;
 			productName = WordHive;
@@ -284,6 +360,24 @@
 			productReference = 2F54FED921B95B1E00231AE9 /* WordHiveTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		2FAD566421C14F7E004AEB8B /* WordHiveFramework */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2FAD566E21C14F7E004AEB8B /* Build configuration list for PBXNativeTarget "WordHiveFramework" */;
+			buildPhases = (
+				2FAD566021C14F7E004AEB8B /* Headers */,
+				2FAD566121C14F7E004AEB8B /* Sources */,
+				2FAD566221C14F7E004AEB8B /* Frameworks */,
+				2FAD566321C14F7E004AEB8B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WordHiveFramework;
+			productName = WordHiveFramework;
+			productReference = 2FAD566521C14F7E004AEB8B /* WordHiveFramework.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -305,6 +399,11 @@
 						ProvisioningStyle = Automatic;
 						TestTargetID = 2F1B96E41EB6FF2600FF91D6;
 					};
+					2FAD566421C14F7E004AEB8B = {
+						CreatedOnToolsVersion = 10.0;
+						DevelopmentTeam = TLV25NDMDF;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = 2F1B96E01EB6FF2600FF91D6 /* Build configuration list for PBXProject "WordHive" */;
@@ -322,6 +421,7 @@
 			targets = (
 				2F1B96E41EB6FF2600FF91D6 /* WordHive */,
 				2F54FED821B95B1E00231AE9 /* WordHiveTests */,
+				2FAD566421C14F7E004AEB8B /* WordHiveFramework */,
 			);
 		};
 /* End PBXProject section */
@@ -371,6 +471,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2FAD566321C14F7E004AEB8B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -378,9 +485,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2FAD565621C128BE004AEB8B /* HexNode.swift in Sources */,
+				2FAD565821C12955004AEB8B /* HexCellRenderer.swift in Sources */,
 				2F645E4421BEB2F60097DD46 /* WordScorer.swift in Sources */,
 				2F54FEE421B9658F00231AE9 /* GridPosition.swift in Sources */,
 				2F1B97031EB74E7A00FF91D6 /* HexCell.swift in Sources */,
+				2FAD565D21C14CAE004AEB8B /* HexCellGridNode.swift in Sources */,
 				2F1B96EB1EB6FF2600FF91D6 /* ViewController.swift in Sources */,
 				2F1B96E91EB6FF2600FF91D6 /* AppDelegate.swift in Sources */,
 				2F1B97051EB77E0700FF91D6 /* Trie.swift in Sources */,
@@ -397,20 +507,33 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F54FEEA21B9ADAA00231AE9 /* CellHilightDelegate.swift in Sources */,
+				2FAD565A21C1491B004AEB8B /* HexCellRenderer.swift in Sources */,
 				2F54FEDC21B95B1E00231AE9 /* WordHiveTests.swift in Sources */,
 				2F7E9C2E21BD8A4A00AC9A8C /* Trie.swift in Sources */,
+				2FAD565921C14918004AEB8B /* HexNode.swift in Sources */,
 				2F54FEE821B9ADAA00231AE9 /* HexCell.swift in Sources */,
 				2F54FF0C21BBB48A00231AE9 /* HexaGridAdjacentCellTest.swift in Sources */,
 				2F54FEE921B9ADAA00231AE9 /* GridPosition.swift in Sources */,
 				2F54FEEC21B9AE0000231AE9 /* RandomAlphabetProvider.swift in Sources */,
 				2F54FF1021BBC49300231AE9 /* HexaGridRightCellTest.swift in Sources */,
+				2FAD565B21C14922004AEB8B /* HexCellGrid_Codeable.swift in Sources */,
 				2F7E9C2A21BC223400AC9A8C /* HexaGridPathTest.swift in Sources */,
 				2F54FF0E21BBBCDF00231AE9 /* HexaGridLeftCellTest.swift in Sources */,
 				2F54FEE721B9AD0D00231AE9 /* HexCellGrid.swift in Sources */,
+				2FAD565E21C14CAE004AEB8B /* HexCellGridNode.swift in Sources */,
 				2F54FEE621B9ABE200231AE9 /* HexaGridDiagonalCellTest.swift in Sources */,
 				2F7E9C2D21BD79E100AC9A8C /* DictionaryManager.swift in Sources */,
 				2F645E4621BEB6090097DD46 /* WordScorerTests.swift in Sources */,
 				2F645E4721BEB66F0097DD46 /* WordScorer.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2FAD566121C14F7E004AEB8B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2FAD567321C15059004AEB8B /* CellHilightDelegate.swift in Sources */,
+				2FAD567221C1501D004AEB8B /* HexNode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -421,6 +544,11 @@
 			isa = PBXTargetDependency;
 			target = 2F1B96E41EB6FF2600FF91D6 /* WordHive */;
 			targetProxy = 2F54FEDE21B95B1E00231AE9 /* PBXContainerItemProxy */;
+		};
+		2FAD566B21C14F7E004AEB8B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2FAD566421C14F7E004AEB8B /* WordHiveFramework */;
+			targetProxy = 2FAD566A21C14F7E004AEB8B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -540,7 +668,9 @@
 		2F1B96F81EB6FF2600FF91D6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = TLV25NDMDF;
 				INFOPLIST_FILE = WordHive/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -554,7 +684,9 @@
 		2F1B96F91EB6FF2600FF91D6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = TLV25NDMDF;
 				INFOPLIST_FILE = WordHive/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -628,6 +760,83 @@
 			};
 			name = Release;
 		};
+		2FAD566F21C14F7E004AEB8B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = TLV25NDMDF;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = WordHiveFramework/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.prash.WordHiveFramework;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		2FAD567021C14F7E004AEB8B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = TLV25NDMDF;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = WordHiveFramework/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.prash.WordHiveFramework;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -654,6 +863,15 @@
 			buildConfigurations = (
 				2F54FEE021B95B1E00231AE9 /* Debug */,
 				2F54FEE121B95B1E00231AE9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2FAD566E21C14F7E004AEB8B /* Build configuration list for PBXNativeTarget "WordHiveFramework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2FAD566F21C14F7E004AEB8B /* Debug */,
+				2FAD567021C14F7E004AEB8B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

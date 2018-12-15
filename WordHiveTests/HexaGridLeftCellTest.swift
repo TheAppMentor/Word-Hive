@@ -30,12 +30,12 @@ class HexaGridLeftCellTest: XCTestCase {
 
     func testLeftCell01() {
         let leftCell = hexGrid.findLeftCell(position: GridPosition(row : 0, col :1))
-        XCTAssertTrue(leftCell?.position == GridPosition(row: 0, col: 0), "Position mismatch")
+        XCTAssertTrue(leftCell?.gridPosition == GridPosition(row: 0, col: 0), "Position mismatch")
     }
     
     func testLeftCell02() {
         let leftCell = hexGrid.findLeftCell(position: GridPosition(row : 0, col :2))
-        XCTAssertTrue(leftCell?.position == GridPosition(row: 0, col: 1), "Position mismatch")
+        XCTAssertTrue(leftCell?.gridPosition == GridPosition(row: 0, col: 1), "Position mismatch")
     }
 
     // Row 1 Tests :
@@ -47,17 +47,17 @@ class HexaGridLeftCellTest: XCTestCase {
     
     func testLeftCell11() {
         let leftCell = hexGrid.findLeftCell(position: GridPosition(row : 1, col :1))
-        XCTAssertTrue(leftCell?.position == GridPosition(row: 1, col: 0), "Position mismatch")
+        XCTAssertTrue(leftCell?.gridPosition == GridPosition(row: 1, col: 0), "Position mismatch")
     }
     
     func testLeftCell12() {
         let leftCell = hexGrid.findLeftCell(position: GridPosition(row : 1, col :2))
-        XCTAssertTrue(leftCell?.position == GridPosition(row: 1, col: 1), "Position mismatch")
+        XCTAssertTrue(leftCell?.gridPosition == GridPosition(row: 1, col: 1), "Position mismatch")
     }
     
     func testLeftCell13() {
         let leftCell = hexGrid.findLeftCell(position: GridPosition(row : 1, col :3))
-        XCTAssertTrue(leftCell?.position == GridPosition(row: 1, col: 2), "Position mismatch")
+        XCTAssertTrue(leftCell?.gridPosition == GridPosition(row: 1, col: 2), "Position mismatch")
     }
     
     // Row 2 Tests :
@@ -68,22 +68,22 @@ class HexaGridLeftCellTest: XCTestCase {
     
     func testLeftCell21() {
         let leftCell = hexGrid.findLeftCell(position: GridPosition(row : 2, col :1))
-        XCTAssertTrue(leftCell?.position == GridPosition(row: 2, col: 0), "Position mismatch")
+        XCTAssertTrue(leftCell?.gridPosition == GridPosition(row: 2, col: 0), "Position mismatch")
     }
     
     func testLeftCell22() {
         let leftCell = hexGrid.findLeftCell(position: GridPosition(row : 2, col :2))
-        XCTAssertTrue(leftCell?.position == GridPosition(row: 2, col: 1), "Position mismatch")
+        XCTAssertTrue(leftCell?.gridPosition == GridPosition(row: 2, col: 1), "Position mismatch")
     }
     
     func testLeftCell23() {
         let leftCell = hexGrid.findLeftCell(position: GridPosition(row : 2, col :3))
-        XCTAssertTrue(leftCell?.position == GridPosition(row: 2, col: 2), "Position mismatch")
+        XCTAssertTrue(leftCell?.gridPosition == GridPosition(row: 2, col: 2), "Position mismatch")
     }
 
     func testLeftCell24() {
         let leftCell = hexGrid.findLeftCell(position: GridPosition(row : 2, col :4))
-        XCTAssertTrue(leftCell?.position == GridPosition(row: 2, col: 3), "Position mismatch")
+        XCTAssertTrue(leftCell?.gridPosition == GridPosition(row: 2, col: 3), "Position mismatch")
     }
 
     // Row 3 Tests :
@@ -94,17 +94,17 @@ class HexaGridLeftCellTest: XCTestCase {
     
     func testLeftCell31() {
         let leftCell = hexGrid.findLeftCell(position: GridPosition(row : 3, col :1))
-        XCTAssertTrue(leftCell?.position == GridPosition(row: 3, col: 0), "Position mismatch")
+        XCTAssertTrue(leftCell?.gridPosition == GridPosition(row: 3, col: 0), "Position mismatch")
     }
     
     func testLeftCell32() {
         let leftCell = hexGrid.findLeftCell(position: GridPosition(row : 3, col :2))
-        XCTAssertTrue(leftCell?.position == GridPosition(row: 3, col: 1), "Position mismatch")
+        XCTAssertTrue(leftCell?.gridPosition == GridPosition(row: 3, col: 1), "Position mismatch")
     }
     
     func testLeftCell33() {
         let leftCell = hexGrid.findLeftCell(position: GridPosition(row : 3, col :3))
-        XCTAssertTrue(leftCell?.position == GridPosition(row: 3, col: 2), "Position mismatch")
+        XCTAssertTrue(leftCell?.gridPosition == GridPosition(row: 3, col: 2), "Position mismatch")
     }
 
     // Row 4 Tests :
@@ -115,17 +115,17 @@ class HexaGridLeftCellTest: XCTestCase {
     
     func testLeftCell41() {
         let leftCell = hexGrid.findLeftCell(position: GridPosition(row : 4, col :1))
-        XCTAssertTrue(leftCell?.position == GridPosition(row: 4, col: 0), "Position mismatch")
+        XCTAssertTrue(leftCell?.gridPosition == GridPosition(row: 4, col: 0), "Position mismatch")
     }
     
     func testLeftCell42() {
         let leftCell = hexGrid.findLeftCell(position: GridPosition(row : 4, col :2))
-        XCTAssertTrue(leftCell?.position == GridPosition(row: 4, col: 1), "Position mismatch")
+        XCTAssertTrue(leftCell?.gridPosition == GridPosition(row: 4, col: 1), "Position mismatch")
     }
     
     func testLeftCell43() {
         let leftCell = hexGrid.findLeftCell(position: GridPosition(row : 4, col :3))
-        XCTAssertTrue(leftCell?.position == GridPosition(row: 4, col: 2), "Position mismatch")
+        XCTAssertTrue(leftCell?.gridPosition == GridPosition(row: 4, col: 2), "Position mismatch")
     }
 
     

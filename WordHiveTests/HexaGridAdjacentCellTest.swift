@@ -23,7 +23,7 @@ class HexaGridAdjacentCellTest: XCTestCase {
         
         XCTAssertTrue(cells.count == validPositions.count, "🔴 Cell Count Should be 1; It is : \(cells.count)")
         
-        let allPostions = cells.map {$0.position!}
+        let allPostions = cells.map {$0.gridPosition}
         validPositions.forEach {
             XCTAssertTrue(allPostions.contains($0), "🔴 Expected Postion => Not Found \($0)")
         }

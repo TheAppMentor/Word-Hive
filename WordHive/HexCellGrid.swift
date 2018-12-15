@@ -8,8 +8,9 @@
 
 import Foundation
 import UIKit
+import SpriteKit
 
-class CellGrid : UIView{
+class CellGridNode : SKNode{
     
 }
 
@@ -41,17 +42,15 @@ class HexCellGrid : CellGrid, CellHilightDelegate{
 //        let cellsPerRow : Int = Int(frame.width.truncatingRemainder(dividingBy: cellWidth))
         
         allGridPositions().forEach { (gridPos) in
-            let  theCell = HexCell(frame: CGRect(x: (cellWidth * CGFloat(gridPos.col)) + gridSpacingFor(row: Int(gridPos.row), cellWidth: cellWidth), y: cellWidth * CGFloat(gridPos.row) , width: cellWidth, height: cellWidth), position : gridPos)
-            //theCell.position = gridPos
-            theCell.touchEventDelegate = self
+            
+            let cellFrame = CGRect(x: (cellWidth * CGFloat(gridPos.col)) + gridSpacingFor(row: Int(gridPos.row), cellWidth: cellWidth), y: cellWidth * CGFloat(gridPos.row) , width: cellWidth, height: cellWidth)
+            
+            let theCell = HexCell(frame: cellFrame, gridPosition: gridPos, textValue: RandomAlphabetProvider.shared.randomAlphabet)
+            
+            //theCell.touchEventDelegate = self
             cells.append(theCell)
-            addSubview(theCell)
+            //addSubview(theCell)
         }
-        
-//        for theRow in 0..<maxRows {
-//            for theCol in 0..<cellCountForRow(row: theRow){
-//            }
-//        }
     }
     
     func allGridPositions() -> [GridPosition]{
@@ -103,9 +102,9 @@ class HexCellGrid : CellGrid, CellHilightDelegate{
     func touchesMovedToLocation(touch : UITouch){
         let currentPostion = touch.location(in: self)
         for eachSubView in subviews{
-            if let hexCell = eachSubView as? HexCell{
+            if var hexCell = eachSubView as? HexCell{
                 if hexCell.frame.contains(currentPostion){
-                    hexCell.layer.backgroundColor = UIColor.purple.cgColor
+                    //hexCell.layer.backgroundColor = UIColor.purple.cgColor
                     if selectedCells.contains(hexCell) == false{  // Each Cell can be selected only once.
                         hexCell.isSelected = true
                         selectedCells.append(hexCell)
@@ -118,7 +117,10 @@ class HexCellGrid : CellGrid, CellHilightDelegate{
     }
     
     func touchesEnded(){
-        selectedCells.forEach({$0.layer.backgroundColor = UIColor.green.cgColor})
+        selectedCells.forEach({_ in
+            print("Touches Ended.")
+            //$0.layer.backgroundColor = UIColor.green.cgColor
+        })
         print("Selected Word is : \(selectedWord)")
         selectedCells = []
     }
@@ -165,7 +167,7 @@ class HexCellGrid : CellGrid, CellHilightDelegate{
     }
     
     func cellAtPosition(position : GridPosition) -> HexCell?{
-        let fetchedCells = cells.filter({$0.position == position})
+        let fetchedCells = cells.filter({$0.gridPosition == position})
         
         if fetchedCells.count == 1 {return fetchedCells.first}
         
@@ -233,9 +235,6 @@ class HexCellGrid : CellGrid, CellHilightDelegate{
                 }
             }
 
-            // Find Bottom Right Cell
-//            if (cellCountRowBelow < inputRowCellCount && position.col <= cellCountRowBelow - 1) || (cellCountRowBelow > inputRowCellCount){
-
             if (cellCountRowBelow < inputRowCellCount) || (cellCountRowBelow > inputRowCellCount){
                 
                 let colToFetch = cellCountRowBelow < inputRowCellCount ? position.col : position.col + 1
@@ -299,7 +298,7 @@ class HexCellGrid : CellGrid, CellHilightDelegate{
     
     
     func getAllWordsStartingWithCell(paths : [HexCell]){
-        let pathLetters = paths.map({return $0.textValue!})
+        let pathLetters = paths.map({return $0.textValue})
 
         let pathString = pathLetters.reduce("",+)
         let dict = DictionaryManager.shared.findWordsWithPrefix(prefix: pathString)
@@ -308,19 +307,7 @@ class HexCellGrid : CellGrid, CellHilightDelegate{
             return
         }
         
-        //print("\n\n ============================================")
-        //print("Paths Are : \(paths)")
-        
-        //let pathText = paths.map({$0.textValue!})
-        //print(pathText)
-        
-        // Set all paths are selected.
-        //paths.forEach { $0.isSelected = true }
-        
-        let adjCells = findAdjacentCells(position: paths.last!.position!)
-        
-        //print("\n\n\nAdjacent Cells are : \(adjCells)")
-        
+        let adjCells = findAdjacentCells(position: paths.last!.gridPosition)
         var newPaths : [[HexCell]] = []
         
         adjCells.forEach {
@@ -328,14 +315,13 @@ class HexCellGrid : CellGrid, CellHilightDelegate{
                 // Why simply fin
                 var tempPath = paths
                 tempPath.append($0)
-                //print("New Paths are : \(tempPath)")
                 newPaths.append(tempPath)
             }
         }
        
         let letterArr = newPaths.map({
             return $0.map({
-                $0.textValue!
+                $0.textValue
             })
         })
         
@@ -348,45 +334,7 @@ class HexCellGrid : CellGrid, CellHilightDelegate{
         }
         
         newPaths.forEach {
-//            print("Recursing => \(newPaths)")
             getAllWordsStartingWithCell(paths: $0)
         }
     }
 }
-
-
-/*
-func getAllWords(paths : [HexCell]){
-    
-    //print("\n\n ============================================")
-    //print("Paths Are : \(paths)")
-    
-    let pathText = paths.map({$0.textValue!})
-    print(pathText)
-    
-    // Set all paths are selected.
-    //paths.forEach { $0.isSelected = true }
-    
-    let adjCells = findAdjacentCells(position: paths.last!.position!)
-    
-    //print("\n\n\nAdjacent Cells are : \(adjCells)")
-    
-    var newPaths : [[HexCell]] = []
-    
-    adjCells.forEach {
-        if  paths.contains($0) == false {
-            // Why simply fin
-            var tempPath = paths
-            tempPath.append($0)
-            //print("New Paths are : \(tempPath)")
-            newPaths.append(tempPath)
-        }
-    }
-    allPaths.append(contentsOf: newPaths)
-    
-    newPaths.forEach {
-        //            print("Recursing => \(newPaths)")
-        getAllPaths(paths: $0)
-    }
-}
- */
