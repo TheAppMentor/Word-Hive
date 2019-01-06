@@ -21,7 +21,10 @@ extension SKNode{
 }
 
 public class HexNode : SKShapeNode{
+    //public var warpGeometry: SKWarpGeometry?
     
+    public var subdivisionLevels: Int = 2
+
     var touchEventDelegate : CellHilightDelegate? = nil
     let widthLine : CGFloat = 1.0
     let numSides = 6
@@ -30,18 +33,18 @@ public class HexNode : SKShapeNode{
     public init(frame : CGRect) {
         super.init()
 
-        let hexPath = roundedPolygonPath(rect: frame, lineWidth: widthLine, sides: numSides , cornerRadius: 20.0, rotationOffset: 0.5).cgPath
+        let hexPath = roundedPolygonPath(rect: frame, lineWidth: widthLine, sides: numSides , cornerRadius: 5.0, rotationOffset: 0.5).cgPath
         
         path = hexPath
-        fillColor = UIColor(displayP3Red: (240.0/255.0), green: (170.0/255.0), blue: (23.0/255.0), alpha: 1.0)
         
+        fillColor = UIColor(red: (240.0/255.0), green: (170.0/255.0), blue: (23.0/255.0), alpha: 1.0)        
         let label = SKLabelNode(text: "?")
         addChild(label)
         label.position = center
         label.zPosition = zPosition + 1
         label.fontColor = UIColor.black
-        label.fontSize = 44.0
-        label.fontName = "SanFranciscoDisplay-Heavy"
+        label.fontSize = 4.0
+        //label.fontName = "SanFranciscoDisplay-Heavy"
         label.color = UIColor.red
         //print(position)
         //print(label.position)

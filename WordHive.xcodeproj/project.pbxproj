@@ -58,6 +58,7 @@
 		2F645E4621BEB6090097DD46 /* WordScorerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F645E4521BEB6090097DD46 /* WordScorerTests.swift */; };
 		2F645E4721BEB66F0097DD46 /* WordScorer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F645E4321BEB2F60097DD46 /* WordScorer.swift */; };
 		2F645E4921BEC1B50097DD46 /* HexCellGrid_Codeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F645E4821BEC1B50097DD46 /* HexCellGrid_Codeable.swift */; };
+		2F7E117A21C558E100BCEC1F /* HexCellGrindNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7E117921C558E100BCEC1F /* HexCellGrindNode.swift */; };
 		2F7E9C2A21BC223400AC9A8C /* HexaGridPathTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7E9C2921BC223400AC9A8C /* HexaGridPathTest.swift */; };
 		2F7E9C2C21BD79E000AC9A8C /* DictionaryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7E9C2B21BD79E000AC9A8C /* DictionaryManager.swift */; };
 		2F7E9C2D21BD79E100AC9A8C /* DictionaryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7E9C2B21BD79E000AC9A8C /* DictionaryManager.swift */; };
@@ -75,6 +76,20 @@
 		2FAD566D21C14F7E004AEB8B /* WordHiveFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2FAD566521C14F7E004AEB8B /* WordHiveFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2FAD567221C1501D004AEB8B /* HexNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAD565521C128BE004AEB8B /* HexNode.swift */; };
 		2FAD567321C15059004AEB8B /* CellHilightDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1B97001EB73C5D00FF91D6 /* CellHilightDelegate.swift */; };
+		2FB1C35C21E1265400088742 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB1C35B21E1265400088742 /* GameScene.swift */; };
+		2FB1C35D21E1265400088742 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB1C35B21E1265400088742 /* GameScene.swift */; };
+		2FB1C35E21E1265400088742 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB1C35B21E1265400088742 /* GameScene.swift */; };
+		2FB1C36021E126D600088742 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 2FB1C35F21E126D600088742 /* GameScene.sks */; };
+		2FB1C36121E126D600088742 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 2FB1C35F21E126D600088742 /* GameScene.sks */; };
+		2FB1C36221E126D600088742 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 2FB1C35F21E126D600088742 /* GameScene.sks */; };
+		2FEF3E2521C67B3700898BE3 /* HexCellGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1B96FE1EB714F900FF91D6 /* HexCellGrid.swift */; };
+		2FEF3E2621C67B3C00898BE3 /* HexCellGridNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAD565C21C14CAE004AEB8B /* HexCellGridNode.swift */; };
+		2FEF3E2721C67B4E00898BE3 /* GridPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F54FEE321B9658F00231AE9 /* GridPosition.swift */; };
+		2FEF3E2821C67B5C00898BE3 /* HexCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1B97021EB74E7A00FF91D6 /* HexCell.swift */; };
+		2FEF3E2921C67B8000898BE3 /* DictionaryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7E9C2B21BD79E000AC9A8C /* DictionaryManager.swift */; };
+		2FEF3E2A21C67B8F00898BE3 /* RandomAlphabetProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F80ACFB1EB884F50062F324 /* RandomAlphabetProvider.swift */; };
+		2FEF3E2B21C67B9500898BE3 /* Trie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1B97041EB77E0700FF91D6 /* Trie.swift */; };
+		2FEF3E2C21C67BB600898BE3 /* WordScorer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F645E4321BEB2F60097DD46 /* WordScorer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -158,6 +173,7 @@
 		2F645E4321BEB2F60097DD46 /* WordScorer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordScorer.swift; sourceTree = "<group>"; };
 		2F645E4521BEB6090097DD46 /* WordScorerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordScorerTests.swift; sourceTree = "<group>"; };
 		2F645E4821BEC1B50097DD46 /* HexCellGrid_Codeable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexCellGrid_Codeable.swift; sourceTree = "<group>"; };
+		2F7E117921C558E100BCEC1F /* HexCellGrindNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexCellGrindNode.swift; sourceTree = "<group>"; };
 		2F7E9C2921BC223400AC9A8C /* HexaGridPathTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexaGridPathTest.swift; sourceTree = "<group>"; };
 		2F7E9C2B21BD79E000AC9A8C /* DictionaryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryManager.swift; sourceTree = "<group>"; };
 		2F80ACFB1EB884F50062F324 /* RandomAlphabetProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomAlphabetProvider.swift; sourceTree = "<group>"; };
@@ -168,6 +184,8 @@
 		2FAD566521C14F7E004AEB8B /* WordHiveFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WordHiveFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FAD566721C14F7E004AEB8B /* WordHiveFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WordHiveFramework.h; sourceTree = "<group>"; };
 		2FAD566821C14F7E004AEB8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2FB1C35B21E1265400088742 /* GameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		2FB1C35F21E126D600088742 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -221,6 +239,8 @@
 			isa = PBXGroup;
 			children = (
 				2F1B96E81EB6FF2600FF91D6 /* AppDelegate.swift */,
+				2FB1C35B21E1265400088742 /* GameScene.swift */,
+				2FB1C35F21E126D600088742 /* GameScene.sks */,
 				2F1B96EA1EB6FF2600FF91D6 /* ViewController.swift */,
 				2F7E9C2B21BD79E000AC9A8C /* DictionaryManager.swift */,
 				2F1B97281EB7AA3E00FF91D6 /* WordList */,
@@ -285,6 +305,7 @@
 				2F54FF0F21BBC49300231AE9 /* HexaGridRightCellTest.swift */,
 				2F7E9C2921BC223400AC9A8C /* HexaGridPathTest.swift */,
 				2F645E4521BEB6090097DD46 /* WordScorerTests.swift */,
+				2F7E117921C558E100BCEC1F /* HexCellGrindNode.swift */,
 				2F54FEDD21B95B1E00231AE9 /* Info.plist */,
 			);
 			path = WordHiveTests;
@@ -454,6 +475,7 @@
 				2F1B97691EB7AA5500FF91D6 /* h in Resources */,
 				2F1B976C1EB7AA5500FF91D6 /* k in Resources */,
 				2F1B97791EB7AA5500FF91D6 /* u in Resources */,
+				2FB1C36021E126D600088742 /* GameScene.sks in Resources */,
 				2F1B97071EB780E200FF91D6 /* dictionary.txt in Resources */,
 				2F1B96EE1EB6FF2600FF91D6 /* Main.storyboard in Resources */,
 				2F1B97671EB7AA5500FF91D6 /* f in Resources */,
@@ -468,6 +490,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2FB1C36121E126D600088742 /* GameScene.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -475,6 +498,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2FB1C36221E126D600088742 /* GameScene.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -485,6 +509,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2FB1C35C21E1265400088742 /* GameScene.swift in Sources */,
 				2FAD565621C128BE004AEB8B /* HexNode.swift in Sources */,
 				2FAD565821C12955004AEB8B /* HexCellRenderer.swift in Sources */,
 				2F645E4421BEB2F60097DD46 /* WordScorer.swift in Sources */,
@@ -514,9 +539,11 @@
 				2F54FEE821B9ADAA00231AE9 /* HexCell.swift in Sources */,
 				2F54FF0C21BBB48A00231AE9 /* HexaGridAdjacentCellTest.swift in Sources */,
 				2F54FEE921B9ADAA00231AE9 /* GridPosition.swift in Sources */,
+				2F7E117A21C558E100BCEC1F /* HexCellGrindNode.swift in Sources */,
 				2F54FEEC21B9AE0000231AE9 /* RandomAlphabetProvider.swift in Sources */,
 				2F54FF1021BBC49300231AE9 /* HexaGridRightCellTest.swift in Sources */,
 				2FAD565B21C14922004AEB8B /* HexCellGrid_Codeable.swift in Sources */,
+				2FB1C35D21E1265400088742 /* GameScene.swift in Sources */,
 				2F7E9C2A21BC223400AC9A8C /* HexaGridPathTest.swift in Sources */,
 				2F54FF0E21BBBCDF00231AE9 /* HexaGridLeftCellTest.swift in Sources */,
 				2F54FEE721B9AD0D00231AE9 /* HexCellGrid.swift in Sources */,
@@ -533,7 +560,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				2FAD567321C15059004AEB8B /* CellHilightDelegate.swift in Sources */,
+				2FEF3E2821C67B5C00898BE3 /* HexCell.swift in Sources */,
+				2FEF3E2621C67B3C00898BE3 /* HexCellGridNode.swift in Sources */,
+				2FEF3E2B21C67B9500898BE3 /* Trie.swift in Sources */,
+				2FEF3E2721C67B4E00898BE3 /* GridPosition.swift in Sources */,
+				2FB1C35E21E1265400088742 /* GameScene.swift in Sources */,
+				2FEF3E2A21C67B8F00898BE3 /* RandomAlphabetProvider.swift in Sources */,
+				2FEF3E2521C67B3700898BE3 /* HexCellGrid.swift in Sources */,
+				2FEF3E2921C67B8000898BE3 /* DictionaryManager.swift in Sources */,
 				2FAD567221C1501D004AEB8B /* HexNode.swift in Sources */,
+				2FEF3E2C21C67BB600898BE3 /* WordScorer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -792,7 +828,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.prash.WordHiveFramework;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -830,7 +866,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.prash.WordHiveFramework;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";

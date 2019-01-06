@@ -10,12 +10,13 @@ import Foundation
 import UIKit
 import SpriteKit
 
-class CellGridNode : SKNode{
-    
+protocol CellGrid {
 }
 
-class HexCellGrid : CellGrid, CellHilightDelegate{
+public class  HexCellGrid : CellGrid {
 
+    public var gridNode : HexCellGridNode!
+    
     let maxRows : UInt = 5 // cant change this..cellCountForRow is hard coded !
     
     var cells : [HexCell] = []
@@ -27,29 +28,35 @@ class HexCellGrid : CellGrid, CellHilightDelegate{
         return tempStr
     }
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        populateGrid(cellWidth: 75.0)
+    public init(frame: CGRect) {
+        populateGrid(cellWidth: 125.0, frame: frame)
+        do {
+            gridNode = try HexCellGridNode(size: CGSize(width: frame.width, height: frame.height), grid: self)
+        }catch{
+            assertionFailure("Unable to form Grid Node")
+        }
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 
-    
-    func populateGrid(cellWidth : CGFloat) {
+    func populateGrid(cellWidth : CGFloat, frame : CGRect) {
         
 //        let cellsPerRow : Int = Int(frame.width.truncatingRemainder(dividingBy: cellWidth))
         
         allGridPositions().forEach { (gridPos) in
-            
-            let cellFrame = CGRect(x: (cellWidth * CGFloat(gridPos.col)) + gridSpacingFor(row: Int(gridPos.row), cellWidth: cellWidth), y: cellWidth * CGFloat(gridPos.row) , width: cellWidth, height: cellWidth)
+           
+
+            let cellFrame = CGRect(x: (cellWidth * CGFloat(gridPos.col)) + gridSpacingFor(row: Int(gridPos.row), cellWidth: cellWidth) - frame.width/2.0,
+                                   y: cellWidth * CGFloat(gridPos.row) - frame.height/2.0,
+                                   width: cellWidth,
+                                   height: cellWidth)
+
+            // let cellFrame = CGRect(x: (cellWidth * CGFloat(gridPos.col)) + gridSpacingFor(row: Int(gridPos.row), cellWidth: cellWidth), y: cellWidth * CGFloat(gridPos.row) , width: cellWidth, height: cellWidth)
             
             let theCell = HexCell(frame: cellFrame, gridPosition: gridPos, textValue: RandomAlphabetProvider.shared.randomAlphabet)
-            
-            //theCell.touchEventDelegate = self
             cells.append(theCell)
-            //addSubview(theCell)
         }
     }
     
@@ -99,6 +106,8 @@ class HexCellGrid : CellGrid, CellHilightDelegate{
 //        }
 //    }
 
+    
+    /*
     func touchesMovedToLocation(touch : UITouch){
         let currentPostion = touch.location(in: self)
         for eachSubView in subviews{
@@ -113,7 +122,6 @@ class HexCellGrid : CellGrid, CellHilightDelegate{
                 }
             }
         }
-        
     }
     
     func touchesEnded(){
@@ -129,7 +137,8 @@ class HexCellGrid : CellGrid, CellHilightDelegate{
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         print("Grid : Touches began....")
     }
-    
+ 
+ */
     func isCellSelected(cell : HexCell){
        
     }
